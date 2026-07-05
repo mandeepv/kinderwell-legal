@@ -110,7 +110,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for Kinderwell</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> July 4, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> July 5, 2026</p>
 
         <h2>Introduction</h2>
         <p>Welcome to Kinderwell. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, store, and protect your information when you use our mobile application.</p>
@@ -229,7 +229,7 @@
         <h3>Data Retention</h3>
         <ul>
             <li><strong>Active accounts:</strong> We retain your data as long as your account is active.</li>
-            <li><strong>Deleted accounts:</strong> All personal data is permanently deleted within 30 days of account deletion. Deletion cascades across authentication, profile, and lesson progress records.</li>
+            <li><strong>Deleted accounts:</strong> When you delete your account, your authentication record and profile (including onboarding answers) are removed from Kinderwell's servers within 30 days. See "Delete Your Data" below for how lesson-progress records and third-party analytics are handled — those are stored differently and their deletion behavior is described there in detail.</li>
             <li><strong>Legal requirements:</strong> We may retain certain data if required by law.</li>
         </ul>
 
@@ -259,7 +259,7 @@
 
         <h3>5. Product Analytics</h3>
         <ul>
-            <li><strong>PostHog</strong> (<a href="https://posthog.com/privacy" target="_blank">PostHog Privacy Policy</a>) — receives events describing which screens you view, which onboarding options you select, whether you complete lessons, and paywall interactions. We identify you to PostHog using your Kinderwell user ID and email so we can understand user journeys. PostHog stores this data in the United States. <strong>We use PostHog data only in aggregate, and only to improve the app.</strong> PostHog is not used to build advertising profiles about you.</li>
+            <li><strong>PostHog</strong> (<a href="https://posthog.com/privacy" target="_blank">PostHog Privacy Policy</a>) — receives events describing which screens you view, which onboarding options you select, whether you complete lessons, and paywall interactions. We identify you to PostHog using only your Kinderwell user ID so we can understand user journeys — your email address is not sent to PostHog. PostHog stores this data in the United States. <strong>We use PostHog data only in aggregate, and only to improve the app.</strong> PostHog is not used to build advertising profiles about you.</li>
         </ul>
 
         <h3>6. Crash Reporting</h3>
@@ -271,7 +271,7 @@
         <p>You have the following rights regarding your data:</p>
 
         <h3>1. Access Your Data</h3>
-        <p>You can view your account information in the Settings screen of the app. To request a full export, email us.</p>
+        <p>The Settings screen of the app shows your signed-in identity, subscription status, and account controls (Restore Purchases, Manage Subscription, Delete Account). For a full export of your personal data (including onboarding answers), email <a href="mailto:kinderwellteam@gmail.com">kinderwellteam@gmail.com</a>.</p>
 
         <h3>2. Correct Your Data</h3>
         <p>Contact us at kinderwellteam@gmail.com to update any incorrect information.</p>
@@ -283,13 +283,24 @@
             <li>All your personal data will be permanently deleted within 30 days</li>
             <li>This action cannot be undone</li>
         </ul>
-        <p>Deletion cascades — your authentication record, profile, onboarding answers, and lesson progress are all removed. Analytics events already collected in PostHog and error records in Sentry may persist for a limited period in aggregate but are no longer linked to you.</p>
+        <p>Deletion removes the following from Kinderwell's servers within 30 days:</p>
+        <ul>
+            <li>Your authentication record (user ID, email, name)</li>
+            <li>Your profile and all onboarding answers you provided</li>
+        </ul>
+        <p>Some data is stored differently and is described separately below:</p>
+        <ul>
+            <li><strong>Lesson progress on your current device</strong> — which lessons and sections you have completed is stored locally in the app's storage on the specific device you are using, not on Kinderwell's servers. This local record is not automatically wiped when you delete your account; it stays on that device until you uninstall the app, and it is anonymous (not tied to your name or email). If you re-create an account on the same device, your prior lesson-progress record on that device may be visible again. To wipe it, uninstall the app after deleting your account.</li>
+            <li><strong>Sentry (error reports)</strong> — Sentry receives crash traces and error context tagged with your device metadata but never receives your name, email, or profile answers, so Sentry records are not personally linked to you before or after account deletion. These records may persist in Sentry's storage until they naturally age out under Sentry's retention policy.</li>
+            <li><strong>PostHog (product analytics)</strong> — PostHog receives events keyed to your Kinderwell user ID. When you delete your account, we stop sending new events for you, and we reset the PostHog session on your current device so it does not continue tracking. However, the historical PostHog events collected before deletion are not automatically removed by PostHog at delete time. They remain associated with your (now-inactive) user ID until PostHog's retention policy ages them out.</li>
+            <li>If you would like your historical PostHog data actively purged at delete time, please email <a href="mailto:kinderwellteam@gmail.com">kinderwellteam@gmail.com</a> — we will process the deletion within 30 days. We plan to add automatic PostHog data deletion to the account-delete flow in a subsequent release.</li>
+        </ul>
 
         <h3>4. Export Your Data</h3>
         <p>Contact us at kinderwellteam@gmail.com to request a copy of your data.</p>
 
         <h3>5. Opt-Out of Communications</h3>
-        <p>You can opt out of push notifications through your device settings.</p>
+        <p>Kinderwell does not currently send push notifications. If we add them in a future release, you will be able to opt out through your device settings; the app will only be able to send notifications after you explicitly grant the iOS notification permission when we first ask.</p>
 
         <h3>6. Withdraw Consent</h3>
         <p>You can withdraw consent for data processing by deleting your account.</p>
@@ -306,9 +317,9 @@
         <p>We do NOT collect your children's names, exact birthdates, photos, voice recordings, contact information, or any other directly identifying details. We do NOT communicate directly with your children.</p>
         <p>The parent providing this information has full control:</p>
         <ul>
-            <li>They can update it any time within the app</li>
             <li>They can delete it entirely via <strong>Settings → Delete Account</strong></li>
             <li>They may choose to skip questions during onboarding</li>
+            <li>To correct or update this information without deleting the account, contact us at <a href="mailto:kinderwellteam@gmail.com">kinderwellteam@gmail.com</a>. We plan to add in-app editing of onboarding answers in a future release.</li>
         </ul>
 
         <h2>International Data Transfers</h2>
